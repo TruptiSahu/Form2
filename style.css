@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Cookie|Raleway:300,700,400');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('./bg-1.jpg') no-repeat center center/cover;
+  color: #333;
+}
+
+.formBox {
+  max-width: 480px;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  padding: 35px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formBox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  background: url('./bg-1.jpg') no-repeat center center/cover;
+  border-radius: inherit;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  filter: blur(10px);
+}
+
+.formBox__logo {
+  width: 60%;
+}
+
+.formBox__title {
+  font-family: 'Cookie', cursive;
+  font-size: 55px;
+  font-weight: 300;
+  margin: 25px 0px;
+}
+
+.form {
+  width: 100%;
+  text-align: center;
+}
+
+.form__row {
+  width: 100%;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #333;
+}
+
+.form__col {
+  display: flex;
+  height: 100%;
+  padding: 0px 5px;
+  flex-flow: column-reverse;
+  align-items: flex-start;
+}
+
+.form__col input {
+  width: 100%;
+  font-size: 22px;
+  padding-bottom: 4px;
+  margin-top: 5px;
+  outline: none;
+  border: none;
+  font-weight: 300;
+  color: #333;
+  background: transparent;
+}
+
+.form__col label {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* Input:Name */
+.form__row--name {
+  display: flex;
+}
+
+.form__row--name .form__col:last-of-type {
+  border-left: 1px solid #333;
+  padding: 0px 5px 0px 10px;
+}
+
+/* Input:CheckBox */
+.form__row--checkbox {
+  width: 100%;
+  border: none;
+  margin: 20px 0 15px 0;
+
+}
+
+.form__row--checkbox .form__col {
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.form__row--checkbox .form__col input {
+  width: auto;
+  margin: auto 5px;
+}
+
+.form__row--checkbox .form__col label {
+  text-transform: none;
+  font-weight: 700;
+}
+
+.form__btn {
+  outline: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.288);
+  border: 1px solid #333;
+  font-size: 18px;
+  color: #333;
+  padding: 7px 10px;
+  transition: all 0.1s;
+}
+
+.form__btn:hover {
+  background: #333;
+  color: #fff;
+}
+
+.form__btn:active {
+  transform: scale(0.98);
+}
